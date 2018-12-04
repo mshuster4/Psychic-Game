@@ -1,16 +1,29 @@
 //Document onkey event to listen for user input letter
+var computerChoices = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
+var userGuesses = [ ];
+
+var wins = 0;
+var losses = 0;
+var guesses = 9; 
+
+var winsText = document.getElementById("wins-text");
+var lossesText = document.getElementById("losses-text");
+var guessesLeft = document.getElementById("guesses-text");
+var userInputText = document.getElementById("user-input-text");
+
 document.onkeyup = function(event) {
-    event.key;
-    function writeGuesses() {
-        var userInput = event.key;
-        document.getElementById("userGuesses").innerhtml = userInput;
-    }
-}
-//List user input under "your guesses" (array)
+
+    var userGuesses = event.key;
+
+    var computerGuess = computerChoices[Math.floor(Math.random() * computerChoices.length)]; 
+
+    userInputText.textContent = userGuesses; 
+
+  };
+
 
 //With each input guess count -1
 
-//Computer selects a random letter
 
 //When Guess Count == 0 
 
