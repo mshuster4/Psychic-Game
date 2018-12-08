@@ -38,6 +38,6 @@ document.onkeyup = function(event) {
   document.getElementById("wins-text").textContent = wins;
   document.getElementById("losses-text").textContent = losses;
   document.getElementById("guesses-text").textContent = guessesLeft;
-  document.getElementById("guesses-so-far").textContent = userChoices;
+  document.getElementById("guesses-so-far").textContent = userChoices.join(" ");
   
 }
